@@ -1,0 +1,38 @@
+.title {
+    text-align: center;
+}
+
+input {
+    border: 1px solid #1d68a7;
+    margin-top: 10px;
+    border-radius: 5px;
+    outline: none;
+    padding: 5px;
+}
+
+input:nth-child(3) {
+    background-color: var(--blue);
+    color: #fff;
+    padding: 5px 15px;
+}
+
+span {
+    margin-top: 10px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    place-items: center;
+    height: 100vh;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 14px gray;
+    padding: 60px;
+}
