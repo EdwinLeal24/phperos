@@ -1,34 +1,9 @@
 <?php
-
-//Insercion con PDO
-
-//Credenciales usuario
-
-define('DB_HOST', 'localhost');
-define('DB_USER', 'root');
-define('DB_PASS', '');
-define('DB_NAME', 'PHPeros');
-
-//Conexion
-
-try
-{
-    //Ejecucion de variables conectando a la BBDD y aplicando UTF8
-    $bbdd = new PDO("mysql:host=".DB_HOST.";dbname=".DB_NAME,DB_USER,DB_PASS,array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'utf8'"));
-}
-
-catch (PDOException $e)
-{
-    exit("Error: " . $e->getMessage());
-}
-
+    $bbdd = new PDO('mysql:host=localhost;dbname=PHPeros', 'root', '',array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'utf8'"));
 ?>
 
 <html>
-    <head>
-        <title>PHPeros insert</title>
-    </head>
-
+<link rel="stylesheet" href="styles.css">
     <body>
         <?php
 
@@ -38,6 +13,7 @@ catch (PDOException $e)
             $time_start=$_POST['time_start'];
             $time_end=$_POST['time_end'];
             $day=$_POST['day'];
+            $id_schedule=$id_schedule++;
 
             //Preparamos el INSERT
             $sql="insert into schedule(Id_Schedule,Id_Class,Time_Start,Time_End,Day)
@@ -50,9 +26,9 @@ catch (PDOException $e)
             //Vinculamos los parámetros al nombre de variable especificado
             $sql->bindParam(':id_schedule',$id_schedule,PDO::PARAM_INT);
             $sql->bindParam(':id_class',$id_class,PDO::PARAM_INT);
-            $sql->bindParam(':time_start',$time_start,PDO::PARAM_STR, 100);
-            $sql->bindParam(':time_end',$time_end,PDO::PARAM_STR, 100);
-            $sql->bindParam(':day',$day,PDO::PARAM_STR, 100);
+            $sql->bindParam(':time_start',$time_start,PDO::PARAM_STR,100);
+            $sql->bindParam(':time_end',$time_end,PDO::PARAM_STR,100);
+            $sql->bindParam(':day',$day,PDO::PARAM_STR,100);
 
             //Ejecutamos la consulta
             $sql->execute();
@@ -67,6 +43,8 @@ catch (PDOException $e)
             }
 
         ?>
+<br>
+        <span class="button"><b><a style="text-decoration:none"  href="index"> VOLVER </a></b></span><br><br>
 
     </body>
 
