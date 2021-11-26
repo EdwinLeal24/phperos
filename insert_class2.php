@@ -1,44 +1,21 @@
 <?php
-
-//Insercion con PDO
-
-//Credenciales usuario
-
-define('DB_HOST', 'localhost');
-define('DB_USER', 'root');
-define('DB_PASS', '');
-define('DB_NAME', 'PHPeros');
-
-//Conexion
-
-try
-{
-    //Ejecucion de variables conectando a la BBDD y aplicando UTF8
-    $bbdd = new PDO("mysql:host=".DB_HOST.";dbname=".DB_NAME,DB_USER,DB_PASS,array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'utf8'"));
-}
-
-catch (PDOException $e)
-{
-    exit("Error: " . $e->getMessage());
-}
-
+    $bbdd = new PDO('mysql:host=localhost;dbname=PHPeros', 'root', '',array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'utf8'"));
 ?>
 
 <html>
-    <head>
-        <title>PHPeros insert</title>
-    </head>
+<link rel="stylesheet" href="styles.css">
 
     <body>
         <?php
 
-            //INformacion enviada por el formulario
+            //Informacion enviada por el formulario
             $id_class=$_POST['id_class'];
             $id_teacher=$_POST['id_teacher'];
             $id_course=$_POST['id_course'];
             $id_schedule=$_POST['id_schedule'];
             $name=$_POST['name'];
             $color=$_POST['color'];
+            $id_class = $id_class++;
 
             //Preparamos el INSERT
             $sql="insert into class(Id_Class,Id_Teacher,Id_Course,Id_Schedule,Name,Color)
@@ -46,7 +23,6 @@ catch (PDOException $e)
 
             //Preparamos la consulta
             $sql = $bbdd->prepare($sql);
-
 
             //Vinculamos los parámetros al nombre de variable especificado
             $sql->bindParam(':id_class',$id_class,PDO::PARAM_INT);
@@ -69,6 +45,8 @@ catch (PDOException $e)
             }
 
         ?>
+        <br>
+        <span class="button"><b><a style="text-decoration:none"  href="index"> VOLVER </a></b></span><br><br>
 
     </body>
 

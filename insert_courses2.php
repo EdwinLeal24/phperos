@@ -1,44 +1,21 @@
 <?php
-
-//Insercion con PDO
-
-//Credenciales usuario
-
-define('DB_HOST', 'localhost');
-define('DB_USER', 'root');
-define('DB_PASS', '');
-define('DB_NAME', 'PHPeros');
-
-//Conexion
-
-try
-{
-    //Ejecucion de variables conectando a la BBDD y aplicando UTF8
-    $bbdd = new PDO("mysql:host=".DB_HOST.";dbname=".DB_NAME,DB_USER,DB_PASS,array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'utf8'"));
-}
-
-catch (PDOException $e)
-{
-    exit("Error: " . $e->getMessage());
-}
-
+    $bbdd = new PDO('mysql:host=localhost;dbname=PHPeros', 'root', '',array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'utf8'"));
 ?>
 
 <html>
-    <head>
-        <title>PHPeros insert</title>
-    </head>
+<link rel="stylesheet" href="styles.css">
 
     <body>
         <?php
 
-            //INformacion enviada por el formulario
+            //Informacion enviada por el formulario
             $id_course=$_POST['id_course'];
             $name=$_POST['name'];
             $description=$_POST['description'];
             $date_start=$_POST['date_start'];
             $date_end=$_POST['date_end'];
             $active=$_POST['active'];
+            $id_course = $id_course++;
 
             //Preparamos el INSERT
             $sql="insert into courses(Id_Course,Name,Description,Date_Start,Date_End,Active)
@@ -69,6 +46,8 @@ catch (PDOException $e)
             }
 
         ?>
+<br>
+        <span class="button"><b><a style="text-decoration:none"  href="index"> VOLVER </a></b></span><br><br>
 
     </body>
 

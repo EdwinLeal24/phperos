@@ -1,33 +1,9 @@
 <?php
-
-//Insercion con PDO
-
-//Credenciales usuario
-
-define('DB_HOST', 'localhost');
-define('DB_USER', 'root');
-define('DB_PASS', '');
-define('DB_NAME', 'PHPeros');
-
-//Conexion
-
-try
-{
-    //Ejecucion de variables conectando a la BBDD y aplicando UTF8
-    $bbdd = new PDO("mysql:host=".DB_HOST.";dbname=".DB_NAME,DB_USER,DB_PASS,array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'utf8'"));
-}
-
-catch (PDOException $e)
-{
-    exit("Error: " . $e->getMessage());
-}
-
+    $bbdd = new PDO('mysql:host=localhost;dbname=PHPeros', 'root', '',array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'utf8'"));
 ?>
 
 <html>
-    <head>
-        <title>PHPeros insert</title>
-    </head>
+<link rel="stylesheet" href="styles.css">
 
     <body>
         <?php
@@ -42,6 +18,7 @@ catch (PDOException $e)
             $telephone=$_POST['telephone'];
             $nif=$_POST['nif'];
             $date_registered=$_POST['date_registered'];
+            $id=$id++;
 
 
             //Preparamos el INSERT
@@ -59,7 +36,7 @@ catch (PDOException $e)
             $sql->bindParam(':email',$email,PDO::PARAM_STR, 100);
             $sql->bindParam(':name',$name,PDO::PARAM_STR, 100);
             $sql->bindParam(':surname',$surname,PDO::PARAM_STR, 100);
-            $sql->bindParam(':telephone',$telephone,PDO::PARAM_STR, 100);
+            $sql->bindParam(':telephone',$telephone,PDO::PARAM_INT);
             $sql->bindParam(':nif',$nif,PDO::PARAM_STR, 100);
             $sql->bindParam(':date_registered',$date_registered,PDO::PARAM_STR, 100);
 
@@ -76,6 +53,8 @@ catch (PDOException $e)
             }
 
         ?>
+<br>
+        <span class="button"><b><a style="text-decoration:none"  href="index"> VOLVER </a></b></span><br><br>
 
     </body>
 

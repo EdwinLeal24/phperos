@@ -1,23 +1,41 @@
 <html>
     <head>
-        <title>PHPeros insert</title>
+        <link rel="stylesheet" href="styles.css">
     </head>
-
-    <body>
-        <h1>PHPeros Insert</h1>
-        <form action="insert_courses2.php" method="post">
-            <label>Id_Course:</label><input type="text" name="id_course"><br><br>
-            <label>Name:</label><input type="text" name="name"><br><br>
-            <label>Description:</label><input type="text" name="description"><br><br>
-            <label>Date_Start:</label><input type="text" name="date_start"><br><br>
-            <label>Date_End:</label><input type="text" name="date_end"><br><br>
-            <label>Active:</label>
-            <select name="active">
-                <option value=0>0</option>
-                <option value=1>1</option>          
-            </select><br><br>
+        <body>
+         <h1>PHPeros Añadir Curso</h1>
+         <br>
+            <form action="insert_courses2.php" method="post">
+            <input type="hidden" name="id_course"></td>
+                <table border="1">
+                    <tr>
+                        <th>Nombre</th>
+                        <td><input type="text" name="name"></td>
+                    </tr>
+                    <tr>
+                        <th>Descripcion</th>
+                        <td><input type="text" name="description"></td>
+                    </tr>
+                    <tr>
+                        <th>Fecha Inicio</th>
+                        <td><input type="text" name="date_start"></td>
+                    </tr>
+                    <tr>
+                        <th>Fecha Fin</th>
+                        <td><input type="text" name="date_end"></td>
+                    </tr>
+                    <tr>
+                        <th>Activo</th>
+                        <td><select name="active">
+                            <option value=0>Deshabilitado</option>
+                            <option value=1>Habilitado</option>
+                        </td>
+                    </tr>
+                </table>
+            <br>
             <input type="submit" value="Insertar datos">
-        </form>
-    </body>
-
+            </form>
+            <br>
+            <span class="button"><b><a style="text-decoration:none"  href="index"> VOLVER </a></b></span><br><br>
+        </body>
 </html>

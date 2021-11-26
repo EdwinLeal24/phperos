@@ -1,76 +1,43 @@
 <?php
-/* Database credentials. Assuming you are running MySQL
-server with default setting (user 'root' with no password) */
-define('DB_HOST', 'localhost');
-define('DB_USER', 'root');
-define('DB_PASS', '');
-define('DB_NAME', 'PHPeros');
-
-
-try
-{
-    $bbdd = new PDO("mysql:host=".DB_HOST.";dbname=".DB_NAME,DB_USER,DB_PASS,array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'utf8'"));
-}
-
-catch (PDOException $e)
-
-{
-    exit("Error: " . $e->getMessage());
-}
-
+            $conexion=mysqli_connect('localhost','root','','PHPeros');
 ?>
-
+<!DOCTYPE html>
 <html>
     <head>
-        <title>PHPeros</title>
-        <style>
-            span {width:60px;display:inline-block;}
-            span:nth-child(2) {width:250px;}
-        </style>
+        <link rel="stylesheet" href="styles.css">
+        <h1>PHPeros Matriculas</h1>
     </head>
     <body>
-        <h1>PHPeros</h1>
-        <p>CONSULTAS A LA BASE DE DATOS</p>
+        <p>CONSULTAS A LA BASE DE DATOS:</p>
+        <br>
+        <table border="1">
+                <tr>
+                 <th>ID Matricula</th>
+                 <th>ID Estudiante</th>
+                 <th>ID Curso</th>
+                 <th>Estado</th>
+                </tr>
+                <?php
+                    $sql="SELECT * from enrollment";
+                    $result=mysqli_query($conexion,$sql);
+            while ($mostrar=mysqli_fetch_array($result)){
+         ?>
+            <tr>
+            <td><?php echo $mostrar['id_enrollment']?></td>
+            <td><?php echo $mostrar['id_student']?></td>
+            <td><?php echo $mostrar['id_course']?></td>
+            <td><?php echo $mostrar['status']?></td>
+            </tr>
         <?php
-            //Consultas en base de datos
-            $sql = "SELECT * FROM enrollment";
-
-            //Preparacion de consulta
-            $query = $bbdd -> prepare($sql);
-
-            //Ejecucion de consulta
-            $query -> execute();
-
-            //Asignacion de resultados y devolucion de filas
-            $results = $query -> fetchAll(PDO::FETCH_OBJ);
-
-            //Si hay resultados, foreach
-            if (count($results) > 0) {
-                foreach($results as $result) {
-                    echo "<div>
-                    <span>".$result -> id_enrollment."</span>
-                    <span>".$result -> id_student."</span>
-                    <span>".$result -> id_course."</span>
-                    <span>".$result -> status."</span>      
-                    <span><a href= \"modificar_enrollment1.php?id=".$result -> id_enrollment."\">Modificar</a></span>
-                    <span><a href= \"borrar_enrollment1.php?id=".$result -> id_enrollment."\">Borrar</a></span>
-                    </div>";
-                }
-            }
-            else
-            {
-                echo 'No hay resultados';
-            }
-        ?>
+        }
+         ?>
+        </table>
         <p>
-            <a href="insert_enrollment1.php">Añadir un enrollment</a>
-            <a href="modificar_enrollment1.php">Modificar un enrollment</a>
-            <a href="borrar_enrollment1.php">Borrar un enrollment</a>
+        <span class="button2"><b><a style="text-decoration:none" href="insert_enrollment1.php">AÑADIR</a></b></span>
+        <span class="button2"><b><a style="text-decoration:none" href="modificar_enrollment1.php">MODIFICAR</a></b></span>
+        <span class="button2"><b><a style="text-decoration:none" href="borrar_enrollment1.php">ELIMINAR</a></b></span>
         </p>
-    
-
+        <br>
+        <span class="button"><b><a style="text-decoration:none"  href="index"> VOLVER </a></b></span><br><br>
     </body>
-
-
 </html>
-
