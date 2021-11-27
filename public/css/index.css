@@ -1,0 +1,10 @@
+.main-container {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+}
+
+.enlaces {
+    text-align: center;
+}
