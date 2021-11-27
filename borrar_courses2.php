@@ -1,4 +1,11 @@
 <?php
+    $bbdd = new PDO('mysql:host=localhost;dbname=PHPeros', 'root', '',array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'utf8'"));
+?>
+
+<html>
+<link rel="stylesheet" href="styles.css">
+<body>
+<?php
 
 //Insercion con PDO
 
@@ -48,3 +55,10 @@ else{
 }
 
 ?>
+        <br>
+        <span class="button"><b><a style="text-decoration:none"  href="index"> VOLVER </a></b></span><br><br>
+
+    </body>
+
+
+</html>

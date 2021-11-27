@@ -7,6 +7,15 @@
     <link href="public/css/register.css" rel="stylesheet">
         <link href="public/css/shared.css" rel="stylesheet">
     </head>
+        <body>
+         <h1>PHPeros Modificar Clase</h1>
+         <br>
+            <form action="modificar_class2.php" method="post">
+                <table border="1">
+                    <tr>
+                        <th>ID Clase</th>
+                        <td><input type="text" name="id_class"></td>
+                    </tr>
 
     <body>
     <?php require 'header.php'?>

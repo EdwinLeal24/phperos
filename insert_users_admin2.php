@@ -1,33 +1,9 @@
 <?php
-
-//Insercion con PDO
-
-//Credenciales usuario
-
-define('DB_HOST', 'localhost');
-define('DB_USER', 'root');
-define('DB_PASS', '');
-define('DB_NAME', 'PHPeros');
-
-//Conexion
-
-try
-{
-    //Ejecucion de variables conectando a la BBDD y aplicando UTF8
-    $bbdd = new PDO("mysql:host=".DB_HOST.";dbname=".DB_NAME,DB_USER,DB_PASS,array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'utf8'"));
-}
-
-catch (PDOException $e)
-{
-    exit("Error: " . $e->getMessage());
-}
-
+    $bbdd = new PDO('mysql:host=localhost;dbname=PHPeros', 'root', '',array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'utf8'"));
 ?>
 
 <html>
-    <head>
-        <title>PHPeros insert</title>
-    </head>
+<link rel="stylesheet" href="styles.css">
 
     <body>
         <?php
@@ -38,6 +14,7 @@ catch (PDOException $e)
             $name=$_POST['name'];
             $email=$_POST['email'];
             $password=$_POST['password'];
+            $id_user_admin=$id_user_admin++;
 
             //Preparamos el INSERT
             $sql="insert into users_admin(Id_User_Admin,Username,Name,Email,Password)
@@ -67,8 +44,8 @@ catch (PDOException $e)
             }
 
         ?>
+<br>
+        <span class="button"><b><a style="text-decoration:none"  href="index"> VOLVER </a></b></span><br><br>
 
     </body>
-
-
 </html>

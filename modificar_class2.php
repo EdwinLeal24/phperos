@@ -1,34 +1,9 @@
 <?php
-
-//Update con PDO
-
-//Credenciales usuario
-
-define('DB_HOST', 'localhost');
-define('DB_USER', 'root');
-define('DB_PASS', '');
-define('DB_NAME', 'PHPeros');
-
-//Conexion
-
-try
-{
-    //Ejecucion de variables conectando a la BBDD y aplicando UTF8
-    $bbdd = new PDO("mysql:host=".DB_HOST.";dbname=".DB_NAME,DB_USER,DB_PASS,array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'utf8'"));
-}
-
-catch (PDOException $e)
-{
-    exit("Error: " . $e->getMessage());
-}
-
+    $bbdd = new PDO('mysql:host=localhost;dbname=PHPeros', 'root', '',array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'utf8'"));
 ?>
 
-
 <html>
-    <head>
-        <title>PHPeros Update</title>
-    </head>
+<link rel="stylesheet" href="styles.css">
 
     <body>
 
@@ -42,7 +17,7 @@ catch (PDOException $e)
     $color=$_POST['color'];
 
     //Preparamos el UPDATE
-    $sql="UPDATE class SET name = :name, id_teacher = :id_teacher, id_course = :id_course, id_schedule = :id_schedule, color = :color WHERE class.id_class = :id_class";
+    $sql="UPDATE class SET name = :name, id_teacher = :id_teacher, id_course = :id_course, id_schedule = :id_schedule, color = :color WHERE id_class = :id_class";
 
     //Preparamos la consulta
     $query = $bbdd->prepare($sql);
@@ -70,10 +45,11 @@ catch (PDOException $e)
     else{
         echo "<div class= 'content alert alert-primary' > No se puede actualizar el registro, ya lo siento. </div>";
     }
-            
+
 
     ?>
-
+        <br>
+        <span class="button"><b><a style="text-decoration:none"  href="index"> VOLVER </a></b></span><br><br>
     </body>
 
 </html>

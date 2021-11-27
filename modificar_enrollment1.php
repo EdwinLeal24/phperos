@@ -1,17 +1,37 @@
 <html>
     <head>
-        <title>PHPeros update</title>
+        <link rel="stylesheet" href="styles.css">
     </head>
+        <body>
+         <h1>PHPeros Modificar Matrícula</h1>
+         <br>
+            <form action="modificar_enrollment2.php" method="post">
 
-    <body>
-        <h1>PHPeros Insert</h1>
-        <form action="modificar_enrollment2.php" method="post">
-        <label>Id_Enrollment:</label><input type="text" name="id_enrollment"><br><br>
-            <label>Id_Student:</label><input type="text" name="id_student"><br><br>
-            <label>Id_Course:</label><input type="text" name="id_course"><br><br>
-            <label>Status:</label><input type="text" name="status"><br><br>
+                <table border="1">
+                <tr>
+                        <th>ID Matrícula</th>
+                        <td><input type="text" name="id_enrollment"></td>
+                    </tr>
+                    <tr>
+                        <th>ID Estudiante</th>
+                        <td><input type="text" name="id_student"></td>
+                    </tr>
+                    <tr>
+                        <th>ID Curso</th>
+                        <td><input type="text" name="id_course"></td>
+                    </tr>
+                    <tr>
+                        <th>Estado</th>
+                        <td><select name="status">
+                            <option value=0>Inactivo</option>
+                            <option value=1>Activo</option>
+                        </td>
+                    </tr>
+                </table>
+            <br>
             <input type="submit" value="Insertar datos">
-        </form>
-    </body>
-
+            </form>
+            <br>
+            <span class="button"><b><a style="text-decoration:none"  href="index"> VOLVER </a></b></span><br><br>
+        </body>
 </html>
