@@ -1,9 +1,14 @@
 <html>
     <head>
-        <link rel="stylesheet" href="styles.css">
+    <link href="public/css/app.css" rel="stylesheet">
+        <link href="public/css/index.css" rel="stylesheet">
+        <link href="public/css/shared.css" rel="stylesheet">
+        <link href="public/css/insert-class/insertClass.css" rel="stylesheet">
     </head>
         <body>
-         <h1>PHPeros Añadir Profesor</h1>
+        <?php require 'header.php'?>
+        <div class="main-container">
+         <h1>AÑADIR PROFESOR</h1>
          <br>
             <form action="insert_teachers2.php" method="post">
             <td><input type="hidden" name="id_teacher">
@@ -30,9 +35,11 @@
                     </tr>
                 </table>
             <br>
-            <input type="submit" value="Insertar datos">
+            <button class="shared-button" type="submit">Añadir profesor</button>
+
             </form>
-            <br>
-            <span class="button"><b><a style="text-decoration:none"  href="index"> VOLVER </a></b></span><br><br>
+
+            <button class="back-button class-button"><a style="text-decoration:none"  href="/phperos-app/select_teachers.php"> VOLVER </a></button>
+</div>
         </body>
 </html>

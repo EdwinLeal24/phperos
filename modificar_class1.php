@@ -4,25 +4,17 @@
         <link href="public/css/app.css" rel="stylesheet">
         <link href="public/css/index.css" rel="stylesheet">
         <link href="public/css/select-class/selectClass.css" rel="stylesheet">
-    <link href="public/css/register.css" rel="stylesheet">
+        <link href="public/css/register.css" rel="stylesheet">
         <link href="public/css/shared.css" rel="stylesheet">
     </head>
         <body>
-         <h1>PHPeros Modificar Clase</h1>
-         <br>
-            <form action="modificar_class2.php" method="post">
-                <table border="1">
-                    <tr>
-                        <th>ID Clase</th>
-                        <td><input type="text" name="id_class"></td>
-                    </tr>
-
-    <body>
-    <?php require 'header.php'?>
+        <?php require 'header.php'?>
         <div class="main-container">
         <div class="container">
-        <section class="login-container">
-        <h3>CONSULTAS A LA BASE DE DATOS</h3>
+
+        <section class="card">
+        <h3>MODIFICAR CLASE</h3>
+
         <form action="modificar_class2.php" method="post">
         <label>Id_Class:</label><input type="text" name="id_class">
             <label>Id_Teacher:</label><input type="text" name="id_teacher">
@@ -30,7 +22,7 @@
             <label>Id_Schedule:</label><input type="text" name="id_schedule">
             <label>Name:</label><input type="text" name="name">
             <label>Color:</label><input type="text" name="color">
-            <input type="submit" value="Actualizar datos">
+            <input type="submit" value="Actualizar clase">
         </form>
         <button class="back-button class-button"><a style="text-decoration:none"  href="/phperos-app/select_class.php"> VOLVER </a></button>
         </section>

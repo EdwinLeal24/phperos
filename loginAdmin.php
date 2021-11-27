@@ -50,7 +50,7 @@ if (!empty($_POST['email']) && !empty($_POST['password'])) {
     <?php endif;?>
 
     <span><a href="login.php">Iniciar sesión como usuario</a></span>
-    <span>Aún no estas registrado? <a href="registerAdmin.php">Registrate!</a></span>
+    <span>Aún no estas registrado? <a href="registerAdmin.php">Registrate como ADMINISTRADOR!</a></span>
     </section>
 
     </div>

@@ -1,20 +1,26 @@
 <?php
-            $conexion=mysqli_connect('localhost','root','','PHPeros');
+$conexion = mysqli_connect('localhost', 'root', '', 'PHPeros');
 ?>
+
+
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="styles.css">
-        <h1>PHPeros Estudiantes</h1>
+    <link href="public/css/app.css" rel="stylesheet">
+        <link href="public/css/index.css" rel="stylesheet">
+        <link href="public/css/select-class/selectClass.css" rel="stylesheet">
+
+
     </head>
     <body>
-        <p>CONSULTAS A LA BASE DE DATOS:</p>
-        <br>
-        <table border="1">
+
+        <?php require 'header.php'?>
+
+        <div class="main-container">
+        <h2>ESTUDIANTES</h2>
+        <table border="1" class="table">
                 <tr>
-                 <th>ID</th>
                  <th>Usuario</th>
-                 <th>Password</th>
                  <th>Email</th>
                  <th>Nombre</th>
                  <th>Apellido</th>
@@ -23,32 +29,32 @@
                  <th>Fecha Registro</th>
                 </tr>
                 <?php
-                    $sql="SELECT * from students";
-                    $result=mysqli_query($conexion,$sql);
-            while ($mostrar=mysqli_fetch_array($result)){
-         ?>
+$sql = "SELECT * from students";
+$result = mysqli_query($conexion, $sql);
+while ($mostrar = mysqli_fetch_array($result)) {
+    ?>
             <tr>
-            <td><?php echo $mostrar['id']?></td>
-            <td><?php echo $mostrar['username']?></td>
-            <td><?php echo $mostrar['pass']?></td>
-            <td><?php echo $mostrar['email']?></td>
-            <td><?php echo $mostrar['name']?></td>
-            <td><?php echo $mostrar['surname']?></td>
-            <td><?php echo $mostrar['telephone']?></td>
-            <td><?php echo $mostrar['nif']?></td>
-            <td><?php echo $mostrar['date_registered']?></td>
+            <td><?php echo $mostrar['username'] ?></td>
+            <td><?php echo $mostrar['email'] ?></td>
+            <td><?php echo $mostrar['name'] ?></td>
+            <td><?php echo $mostrar['surname'] ?></td>
+            <td><?php echo $mostrar['telephone'] ?></td>
+            <td><?php echo $mostrar['nif'] ?></td>
+            <td><?php echo $mostrar['date_registered'] ?></td>
             </tr>
         <?php
-        }
-         ?>
-        </table>
-        <p>
-        <span class="button2"><b><a style="text-decoration:none" href="insert_students1.php">AÑADIR</a></b></span>
-        <span class="button2"><b><a style="text-decoration:none" href="modificar_students1.php">MODIFICAR</a></b></span>
-        <span class="button2"><b><a style="text-decoration:none" href="borrar_students1.php">ELIMINAR</a></b></span>
-        </p>
-        <br>
-        <span class="button"><b><a style="text-decoration:none"  href="index"> VOLVER </a></b></span><br><br>
+}
+?>
+         </table>
+        <div class="buttons">
+            <button class="class-button"><a style="text-decoration:none" href="insert_students1.php">AÑADIR</a></button>
+            <button class="class-button"><a style="text-decoration:none" href="modificar_students1.php">MODIFICAR</a></button>
+            <button class="class-button"><a style="text-decoration:none" href="borrar_students1.php">ELIMINAR</a></button>
+        </div>
+
+        <button class="back-button class-button"><a style="text-decoration:none"  href="/phperos-app/indexAdmin.php"> VOLVER </a></button>
+    </div>
+
     </body>
 </html>
 

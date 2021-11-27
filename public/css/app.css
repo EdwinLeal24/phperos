@@ -1,5 +1,4 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);
-@charset "UTF-8";
 /*!
  * Bootstrap v4.6.1 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
@@ -28,6 +27,7 @@
     --danger: #e3342f;
     --light: #f8f9fa;
     --dark: #343a40;
+    --shadow: #607d8b;
     --breakpoint-xs: 0;
     --breakpoint-sm: 576px;
     --breakpoint-md: 768px;
@@ -221,7 +221,7 @@ svg {
 table {
     border-collapse: collapse;
     border-radius: 6px;
-    box-shadow: 0 0 0 2px var(--indigo);
+    box-shadow: 0 4px 14px 1px var(--shadow);
     border-style: hidden;
 }
 
@@ -1766,7 +1766,7 @@ pre code {
     }
 }
 .table {
-    width: 100%;
+    width: 80%;
     margin-bottom: 1rem;
     color: #212529;
 }

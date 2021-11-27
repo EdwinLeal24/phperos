@@ -42,15 +42,15 @@ $sql->execute();
 $lastInsertId = $bbdd->lastInsertId();
 
 if ($lastInsertId > 0) {
-    echo " <div class='main-container'><div class='content alert alert-primary' > <h4>Gracias, tu clase es: $name </h4></div></div>";
+    echo " <div class='main-container'><div class='content alert alert-primary' > <h4>Tu clase $name se ha guardado correctamente</h4></div></div>";
 } else {
-    echo "<div class= 'content alert alert-primary' ><h4> No se pueden agregar datos, ya lo siento. </h4></div>";
+    echo "<div class='main-container'><div class= 'content alert alert-primary' ><h4> Los datos no se han podido agregar. </h4></div></div>";
 }
 
 ?>
-        <br>
-        <button class="back-button class-button"><a class="white-link" style="text-decoration:none"  href="/phperos-app"> VOLVER </a></button>
-
+    <div class='main-container'>
+        <button class="back-button class-button"><a class="white-link" style="text-decoration:none"  href="/phperos-app/select_class.php"> VOLVER </a></button>
+    </div>
     </body>
 
 

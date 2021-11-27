@@ -5,6 +5,33 @@
     place-items: center;
 }
 
-.enlaces {
+.enlaces,
+h2 {
     text-align: center;
+}
+
+h4 {
+    margin: 0;
+}
+
+.enlaces {
+    display: flex;
+    margin: 10px;
+}
+
+.enlaces-admin {
+    flex-direction: column;
+}
+
+.link {
+    padding: 5px 15px;
+    box-shadow: 0 4px 14px var(--gray);
+    border-radius: 10px;
+    background: #2a2a2a;
+    color: white;
+    margin: 10px;
+}
+
+.link:hover {
+    box-shadow: 0 4px 14px 4px var(--gray);
 }

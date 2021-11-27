@@ -1,13 +1,18 @@
 <html>
-    <head>
-        <link rel="stylesheet" href="styles.css">
+<head>
+        <link href="public/css/app.css" rel="stylesheet">
+        <link href="public/css/index.css" rel="stylesheet">
+        <link href="public/css/shared.css" rel="stylesheet">
+        <link href="public/css/insert-class/insertClass.css" rel="stylesheet">
     </head>
-        <body>
-         <h1>PHPeros Añadir Curso</h1>
+    <body>
+        <?php require 'header.php'?>
+        <div class="main-container">
+         <h2>AGREGAR CURSO</h2>
          <br>
             <form action="insert_courses2.php" method="post">
             <input type="hidden" name="id_course"></td>
-                <table border="1">
+                <table border="1" class="table">
                     <tr>
                         <th>Nombre</th>
                         <td><input type="text" name="name"></td>
@@ -33,9 +38,9 @@
                     </tr>
                 </table>
             <br>
-            <input type="submit" value="Insertar datos">
-            </form>
-            <br>
-            <span class="button"><b><a style="text-decoration:none"  href="index"> VOLVER </a></b></span><br><br>
+            <button class="shared-button" type="submit">Insertar curso</button>
+        </form>
+
+            <button class="back-button class-button"><a class="white-link" style="text-decoration:none"  href="/phperos-app/select_courses.php"> VOLVER </a></button>
         </body>
 </html>

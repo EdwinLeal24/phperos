@@ -14,11 +14,8 @@ define('DB_NAME', 'PHPeros');
 try
 {
     //Ejecucion de variables conectando a la BBDD y aplicando UTF8
-    $bbdd = new PDO("mysql:host=".DB_HOST.";dbname=".DB_NAME,DB_USER,DB_PASS,array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'utf8'"));
-}
-
-catch (PDOException $e)
-{
+    $bbdd = new PDO("mysql:host=" . DB_HOST . ";dbname=" . DB_NAME, DB_USER, DB_PASS, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'utf8'"));
+} catch (PDOException $e) {
     exit("Error: " . $e->getMessage());
 }
 
@@ -26,49 +23,51 @@ catch (PDOException $e)
 
 
 <html>
-<link rel="stylesheet" href="styles.css">
+<link href="public/css/app.css" rel="stylesheet">
+        <link href="public/css/index.css" rel="stylesheet">
+        <link href="public/css/select-class/selectClass.css" rel="stylesheet">
 
     <body>
+    <?php require 'header.php'?>
 
     <?php
-    //Informacion enviada por el formulario
-    $id_enrollment=$_POST['id_enrollment'];
-    $id_student=$_POST['id_student'];
-    $id_course=$_POST['id_course'];
-    $status=$_POST['status'];
+//Informacion enviada por el formulario
+$id_enrollment = $_POST['id_enrollment'];
+$id_student = $_POST['id_student'];
+$id_course = $_POST['id_course'];
+$status = $_POST['status'];
 
-    //Preparamos el UPDATE
-    $sql="UPDATE enrollment SET id_student = :id_student, id_course = :id_course, status = :status WHERE enrollment.id_enrollment = :id_enrollment";
+//Preparamos el UPDATE
+$sql = "UPDATE enrollment SET id_student = :id_student, id_course = :id_course, status = :status WHERE enrollment.id_enrollment = :id_enrollment";
 
-    //Preparamos la consulta
-    $query = $bbdd->prepare($sql);
+//Preparamos la consulta
+$query = $bbdd->prepare($sql);
 
-    //Vinculamos los parametros al nombre de variable especificado
-    $query->bindParam(':id_enrollment',$id_enrollment,PDO::PARAM_INT);
-    $query->bindParam(':id_student',$id_student,PDO::PARAM_INT);
-    $query->bindParam(':id_course',$id_course,PDO::PARAM_INT);
-    $query->bindParam(':status',$status,PDO::PARAM_INT);
+//Vinculamos los parametros al nombre de variable especificado
+$query->bindParam(':id_enrollment', $id_enrollment, PDO::PARAM_INT);
+$query->bindParam(':id_student', $id_student, PDO::PARAM_INT);
+$query->bindParam(':id_course', $id_course, PDO::PARAM_INT);
+$query->bindParam(':status', $status, PDO::PARAM_INT);
 
+//Ejecutamos la consulta
+$query->execute();
 
-    //Ejecutamos la consulta
-    $query->execute();
+//Comprobamos que ha ido bien
+$lastInsertId = $bbdd->lastInsertId();
 
-    //Comprobamos que ha ido bien
-    $lastInsertId = $bbdd->lastInsertId();
+if ($query->rowCount() > 0) {
+    $count = $query->rowCount();
+    require 'successUpdate.php';
 
-    if($query->rowCount() > 0)
-    {
-        $count = $query -> rowCount();
-        echo "<div class='content alert alert-primary' > Se ha podido actualizar el registro </div>";
-    }
-    else{
-        echo "<div class= 'content alert alert-primary' > No se puede actualizar el registro, ya lo siento. </div>";
-    }
+} else {
+    require 'errorUpdate.php';
 
+}
 
-    ?>
-        <br>
-        <span class="button"><b><a style="text-decoration:none"  href="index"> VOLVER </a></b></span><br><br>
+?>
+       <div class='main-container'>
+        <button class="back-button class-button"><a class="white-link" style="text-decoration:none"  href="/phperos-app/select_enrollment.php"> VOLVER </a></button>
+        </div>
     </body>
 
 </html>

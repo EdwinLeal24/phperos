@@ -42,12 +42,3 @@
 
   <?php endif;?>
 </header>
-
-
-
-<!--
-    <span>
-      <a class="link" href="login.php">Login</a>
-      <a class="link" href="register.php">SignUp</a>
-    </span>
- -->

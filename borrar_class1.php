@@ -11,16 +11,16 @@
     <body>
     <?php require 'header.php'?>
         <div class="main-container">
-        <div class="container">
+
         <section class="login-container">
-        <h1>PHPeros Delete</h1>
+        <h1>ELIMINAR CLASE</h1>
         <form action="borrar_class2.php" method="post">
-            <label>Id_Class:</label><input type="text" name="id_class"><br><br>
-            <input type="submit" value="Borrar datos">
+            <label>Id_Class:</label><input type="text" name="id_class">
+            <input type="submit" value="Eliminar clase">
         </form>
         <button class="back-button class-button"><a style="text-decoration:none"  href="/phperos-app/select_class.php"> VOLVER </a></button>
         </section>
-</div>
+
 </div>
     </body>
 

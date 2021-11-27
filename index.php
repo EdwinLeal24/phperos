@@ -29,9 +29,9 @@ if (isset($_SESSION['user_id'])) {
 
     <title>PHPeros</title>
 
-    <!-- Fonts -->
     <link href="public/css/app.css" rel="stylesheet">
     <link href="public/css/index.css" rel="stylesheet">
+    <link href="public/css/shared.css" rel="stylesheet">
 </head>
   <body>
 
@@ -40,24 +40,48 @@ if (isset($_SESSION['user_id'])) {
     <?php if (!empty($user)): ?>
 
       <div class="main-container">
-        <h2>GESTIONA TU HORARIO</h2>
 
-        <section class="enlaces">
-          <a href="select_class.php">Mis clases</a><br><br>
-          <a href="select_courses.php">Mis cursos</a><br><br>
+        <section class="card">
+        <h2>GESTIONA TU HORARIO</h2>
+        <div class="enlaces">
+          <a class="link" href="select_class.php">
+            <h4>Mis clases</h4>
+          </a>
+          <a class="link" href="select_courses.php">
+            <h4>Mis cursos</h4>
+          </a>
+        </div>
+
+
+          <a href="logout.php">
+          <p>Logout</p>
+        </a>
         </section>
 
-        <a href="logout.php">
-          Logout
-        </a>
+        </div>
+
 
       <?php else: ?>
-        <h1>Please Login or SignUp</h1>
+        <div class="main-container">
 
-        <a href="login.php">Login</a> or
-        <a href="register.php">SignUp</a>
+        <section class="card">
+
+        <h2>POR FAVOR, INICIA SESIÓN O REGISTRATE</h2>
+
+        <div class="enlaces">
+          <a class="link" href="login.php">
+            <h4>Iniciar</h4>
+          </a>
+          <a class="link" href="register.php">
+            <h4>Registrar</h4>
+          </a>
+        </div>
+
+
+        </section>
+
+        </div>
       <?php endif;?>
-    </div>
 
 
   </body>

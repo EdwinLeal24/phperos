@@ -1,45 +1,30 @@
 <html>
-    <head>
-        <link rel="stylesheet" href="styles.css">
+<head>
+        <title>PHPeros update</title>
+        <link href="public/css/app.css" rel="stylesheet">
+        <link href="public/css/index.css" rel="stylesheet">
+        <link href="public/css/select-class/selectClass.css" rel="stylesheet">
+        <link href="public/css/register.css" rel="stylesheet">
+        <link href="public/css/shared.css" rel="stylesheet">
     </head>
         <body>
-         <h1>PHPeros Modificar Curso</h1>
-         <br>
-            <form action="modificar_courses2.php" method="post">
+        <?php require 'header.php'?>
+        <div class="main-container">
+        <div class="container">
+        <section class="card">
 
-                <table border="1">
-                    <tr>
-                        <th>ID Curso</th>
-                        <td><input type="text" name="id_course"></td>
-                    </tr>
-                    <tr>
-                        <th>Nombre</th>
-                        <td><input type="text" name="name"></td>
-                    </tr>
-                    <tr>
-                        <th>Descripcion</th>
-                        <td><input type="text" name="description"></td>
-                    </tr>
-                    <tr>
-                        <th>Fecha Inicio</th>
-                        <td><input type="date" name="date_start" value="2021-01-01" min="2021-01-01" max="2022-12-31">></td>
-                    </tr>
-                    <tr>
-                        <th>Fecha Fin</th>
-                        <td><input type="date" name="date_end" value="2021-01-01" min="2021-01-01" max="2022-12-31">></td>
-                    </tr>
-                    <tr>
-                        <th>Activo</th>
-                        <td><select name="active">
+         <h1>MODIFICAR CURSO</h1>
+            <form action="modificar_courses2.php" method="post">
+            <label>ID Curso</label><input type="text" name="id_course">
+            <label>Nombre</label><input type="text" name="name">
+            <label>Descripcion</label><input type="text" name="description">
+            <label>Fecha Inicio</label><input type="date" name="date_start" value="2021-01-01" min="2021-01-01" max="2022-12-31">
+            <label>Fecha Fin</label><input type="date" name="date_end" value="2021-01-01" min="2021-01-01" max="2022-12-31">
+            <label>Activo</label><select name="active">
                             <option value=0>Deshabilitado</option>
                             <option value=1>Habilitado</option>
-                        </td>
-                    </tr>
-                </table>
-            <br>
-            <input type="submit" value="Insertar datos">
+            <input type="submit" value="Actualizar curso">
             </form>
-            <br>
-            <span class="button"><b><a style="text-decoration:none"  href="index"> VOLVER </a></b></span><br><br>
+            <button class="back-button class-button"><a style="text-decoration:none"  href="/phperos-app/select_courses.php"> VOLVER </a></button>
         </body>
 </html>

@@ -27,3 +27,14 @@
 .shared-button:hover {
     box-shadow: 0 4px 14px 0 rgb(33 118 189 / 60%);
 }
+
+.card {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 14px gray;
+    padding: 50px;
+    width: 70%;
+    max-width: 450px;
+}

@@ -1,37 +1,33 @@
 <html>
-    <head>
-        <link rel="stylesheet" href="styles.css">
+<head>
+        <title>PHPeros update</title>
+        <link href="public/css/app.css" rel="stylesheet">
+        <link href="public/css/index.css" rel="stylesheet">
+        <link href="public/css/select-class/selectClass.css" rel="stylesheet">
+        <link href="public/css/register.css" rel="stylesheet">
+        <link href="public/css/shared.css" rel="stylesheet">
     </head>
         <body>
-         <h1>PHPeros Modificar Matrícula</h1>
-         <br>
-            <form action="modificar_enrollment2.php" method="post">
+        <?php require 'header.php'?>
+        <div class="main-container">
+        <div class="container">
 
-                <table border="1">
-                <tr>
-                        <th>ID Matrícula</th>
-                        <td><input type="text" name="id_enrollment"></td>
-                    </tr>
-                    <tr>
-                        <th>ID Estudiante</th>
-                        <td><input type="text" name="id_student"></td>
-                    </tr>
-                    <tr>
-                        <th>ID Curso</th>
-                        <td><input type="text" name="id_course"></td>
-                    </tr>
-                    <tr>
-                        <th>Estado</th>
-                        <td><select name="status">
+        <section class="card">
+        <h3>MODIFICAR MATRÍCULA</h3>
+
+            <form action="modificar_enrollment2.php" method="post">
+            <label>ID Matrícula</label><input type="text" name="id_enrollment">
+            <label>ID Estudiante</label><input type="text" name="id_student">
+            <label>ID Course:</label><input type="text" name="id_course">
+            <label>Estado</label><select name="status">
                             <option value=0>Inactivo</option>
                             <option value=1>Activo</option>
-                        </td>
-                    </tr>
-                </table>
-            <br>
-            <input type="submit" value="Insertar datos">
+            <input type="submit" value="Actualizar matrícula">
+
             </form>
-            <br>
-            <span class="button"><b><a style="text-decoration:none"  href="index"> VOLVER </a></b></span><br><br>
+            <button class="back-button class-button"><a style="text-decoration:none"  href="/phperos-app/select_enrollment.php"> VOLVER </a></button>
+        </section>
+        </div>
+</div>
         </body>
 </html>

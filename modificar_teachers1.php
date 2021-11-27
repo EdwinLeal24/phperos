@@ -1,42 +1,33 @@
 <html>
-    <head>
-        <link rel="stylesheet" href="styles.css">
+<head>
+        <link href="public/css/app.css" rel="stylesheet">
+        <link href="public/css/index.css" rel="stylesheet">
+        <link href="public/css/select-class/selectClass.css" rel="stylesheet">
+        <link href="public/css/register.css" rel="stylesheet">
+        <link href="public/css/shared.css" rel="stylesheet">
     </head>
         <body>
-         <h1>PHPeros Modificar Profesor</h1>
-         <br>
+        <?php require 'header.php'?>
+        <div class="main-container">
+        <div class="container">
+
+        <section class="card">
+        <h3>MODIFICAR HORARIO</h3>
+
             <form action="modificar_teachers2.php" method="post">
 
-                <table border="1">
-                <tr>
-                        <th>ID</th>
-                        <td><input type="text" name="id_teacher">
-                    </tr>
-                    <tr>
-                        <th>Nombre</th>
-                        <td><input type="text" name="name"></td>
-                    </tr>
-                    <tr>
-                        <th>Apellido</th>
-                        <td><input type="text" name="surname"></td>
-                    </tr>
-                    <tr>
-                        <th>Telefono</th>
-                        <td><input type="text" name="telephone"></td>
-                    </tr>
-                    <tr>
-                        <th>NIF</th>
-                        <td><input type="text" name="nif"></td>
-                    </tr>
-                    <tr>
-                        <th>email</th>
-                        <td><input type="text" name="email"></td>
-                    </tr>
-                </table>
-            <br>
-            <input type="submit" value="Insertar datos">
+                <label>ID</label><input type="text" name="id_teacher">
+                <label>Nombre</label><input type="text" name="name">
+                <label>Apellido</label><input type="text" name="surname">
+                <label>Telefono</label><input type="text" name="telephone">
+                <label>NIF</label><input type="text" name="nif">
+                <label>email</label><input type="text" name="email">
+
+                <input type="submit" value="Actualizar profesor">
             </form>
-            <br>
-            <span class="button"><b><a style="text-decoration:none"  href="index"> VOLVER </a></b></span><br><br>
+            <button class="back-button class-button"><a style="text-decoration:none"  href="/phperos-app/select_teachers.php"> VOLVER </a></button>
+        </section>
+        </div>
+</div>
         </body>
 </html>

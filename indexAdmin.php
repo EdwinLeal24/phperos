@@ -8,7 +8,6 @@ require 'database.php';
 if (isset($_SESSION['admin_user_id'])) {
 
     $records = $conn->prepare('SELECT id_user_admin, name, email, pass FROM users_admin WHERE id_user_admin = :id_user_admin');
-    echo "Today is " . date("d/m/Y") . "<br>";
 
     $records->bindParam(':id_user_admin', $_SESSION['admin_user_id']);
     $records->execute();
@@ -32,33 +31,57 @@ if (isset($_SESSION['admin_user_id'])) {
 
     <link href="public/css/app.css" rel="stylesheet">
     <link href="public/css/index.css" rel="stylesheet">
+    <link href="public/css/shared.css" rel="stylesheet">
 </head>
   <body>
 
     <?php require 'header.php'?>
 
     <?php if (!empty($resultsAdmin)): ?>
-        <h1>Please Login or SignUp</h1>
+      <div class="main-container">
 
-        <a href="login.php">Login</a> or
-        <a href="register.php">SignUp</a>
-        <a href="logout.php">
-          Logout
-        </a>
+        <section class="card">
+
+        <h2>POR FAVOR, INICIA SESIÓN O REGISTRATE</h2>
+
+        <div class="enlaces">
+          <a class="link" href="loginAdmin.php">
+            <h4>Iniciar</h4>
+          </a>
+          <a class="link" href="registerAdmin.php">
+            <h4>Registrar</h4>
+          </a>
+        </div>
       <?php else: ?>
-        <div class="main-container">
-          <h2>PANEL DE ADMINISTRADOR</h2>
 
-          <section class="enlaces">
-            <a href="select_enrollment.php">ENLACE A ENROLLMENT</a><br><br>
-            <a href="select_schedule.php">ENLACE A LOS HORARIOS</a><br><br>
-            <a href="select_students.php">ENLACE A LOS ESTUDIANTES</a><br><br>
-            <a href="select_teachers.php">ENLACE A LOS PROFESORES</a><br><br>
-            <a href="select_users_admin.php">ENLACE A LOS USUARIOS ADMINISTRADORES</a><br><br>
-            <a href="logout.php">
-              Logout
-            </a>
-          </section>
+        <div class="main-container">
+
+        <section class="card">
+        <h2>PANEL DE ADMINISTRADOR</h2>
+        <div class="enlaces enlaces-admin">
+          <a class="link" href="select_enrollment.php">
+            <h4>Enrollment</h4>
+          </a>
+          <a class="link" href="select_schedule.php">
+            <h4>Horarios</h4>
+          </a>
+          <a class="link" href="select_students.php">
+            <h4>Estudiantes</h4>
+          </a>
+          <a class="link" href="select_teachers.php">
+            <h4>Profesores</h4>
+          </a>
+          <a class="link" href="select_users_admin.php">
+            <h4>Administradores</h4>
+          </a>
+        </div>
+
+
+          <a href="logout.php">
+          <p>Logout</p>
+        </a>
+        </section>
+
         </div>
       <?php endif;?>
 

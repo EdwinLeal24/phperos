@@ -8,7 +8,7 @@
         <body>
         <?php require 'header.php'?>
         <div class="main-container">
-         <h2>AÑADIR CLASE</h2>
+         <h2>AGREGAR CLASE</h2>
          <br>
             <form action="insert_class2.php" method="post">
             <input type="hidden" name="id_class">
@@ -36,8 +36,9 @@
                 </table>
             <br>
             <button class="shared-button" type="submit">Insertar clase</button>
-            </form>
-            <br>
-            <button class="back-button class-button"><a class="white-link" style="text-decoration:none"  href="/phperos-app"> VOLVER </a></button>
+        </form>
+
+            <button class="back-button class-button"><a class="white-link" style="text-decoration:none"  href="/phperos-app/select_class.php"> VOLVER </a></button>
+</div>
         </body>
 </html>
