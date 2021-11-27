@@ -43,7 +43,7 @@ while ($mostrar = mysqli_fetch_array($result)) {
             <button class="class-button"><a style="text-decoration:none" href="borrar_enrollment1.php">ELIMINAR</a></button>
         </div>
 
-        <button class="back-button class-button"><a style="text-decoration:none"  href="/phperos-app/indexAdmin.php"> VOLVER </a></button>
+        <button class="back-button class-button"><a style="text-decoration:none"  href="/indexAdmin.php"> VOLVER </a></button>
     </div>
     </body>
 </html>

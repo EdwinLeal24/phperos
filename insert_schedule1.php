@@ -35,7 +35,7 @@
             <button class="shared-button" type="submit">Añadir Horario</button>
             </form>
 
-            <button class="back-button class-button"><a style="text-decoration:none"  href="/phperos-app/select_schedule.php"> VOLVER </a></button>
+            <button class="back-button class-button"><a style="text-decoration:none"  href="/select_schedule.php"> VOLVER </a></button>
 </div>
         </body>
 </html>

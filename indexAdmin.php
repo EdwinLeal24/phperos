@@ -7,7 +7,7 @@ require 'database.php';
 
 if (isset($_SESSION['admin_user_id'])) {
 
-    $records = $conn->prepare('SELECT id_user_admin, name, email, pass FROM users_admin WHERE id_user_admin = :id_user_admin');
+    $records = $conn->prepare('SELECT id_user_admin, name, email, password FROM users_admin WHERE id_user_admin = :id_user_admin');
 
     $records->bindParam(':id_user_admin', $_SESSION['admin_user_id']);
     $records->execute();

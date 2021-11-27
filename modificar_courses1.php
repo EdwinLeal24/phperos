@@ -25,6 +25,6 @@
                             <option value=1>Habilitado</option>
             <input type="submit" value="Actualizar curso">
             </form>
-            <button class="back-button class-button"><a style="text-decoration:none"  href="/phperos-app/select_courses.php"> VOLVER </a></button>
+            <button class="back-button class-button"><a style="text-decoration:none"  href="/select_courses.php"> VOLVER </a></button>
         </body>
 </html>

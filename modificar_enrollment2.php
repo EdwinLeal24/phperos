@@ -66,7 +66,7 @@ if ($query->rowCount() > 0) {
 
 ?>
        <div class='main-container'>
-        <button class="back-button class-button"><a class="white-link" style="text-decoration:none"  href="/phperos-app/select_enrollment.php"> VOLVER </a></button>
+        <button class="back-button class-button"><a class="white-link" style="text-decoration:none"  href="/select_enrollment.php"> VOLVER </a></button>
         </div>
     </body>
 

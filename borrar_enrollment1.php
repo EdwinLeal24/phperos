@@ -18,7 +18,7 @@
             <label>ID Matrícula</label><input type="text" name="id_enrollment">
             <input type="submit" value="Eliminar matrícula">
             </form>
-            <button class="back-button class-button"><a style="text-decoration:none"  href="/phperos-app/select_enrollment.php"> VOLVER </a></button>
+            <button class="back-button class-button"><a style="text-decoration:none"  href="/select_enrollment.php"> VOLVER </a></button>
         </section>
 
 </div>

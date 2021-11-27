@@ -39,7 +39,7 @@
 
             </form>
 
-            <button class="back-button class-button"><a style="text-decoration:none"  href="/phperos-app/select_teachers.php"> VOLVER </a></button>
+            <button class="back-button class-button"><a style="text-decoration:none"  href="/select_teachers.php"> VOLVER </a></button>
 </div>
         </body>
 </html>

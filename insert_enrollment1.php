@@ -33,7 +33,7 @@
             <button class="shared-button" type="submit">Añadir matricula</button>
             </form>
 
-            <button class="back-button class-button"><a style="text-decoration:none"  href="/phperos-app/select_enrollment.php"> VOLVER </a></button>
+            <button class="back-button class-button"><a style="text-decoration:none"  href="/select_enrollment.php"> VOLVER </a></button>
 </div>
         </body>
 </html>

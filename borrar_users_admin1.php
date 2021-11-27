@@ -21,7 +21,7 @@
                 <input type="submit" value="Eliminar administrador">
 
             </form>
-            <button class="back-button class-button"><a style="text-decoration:none"  href="/phperos-app/select_users_admin.php"> VOLVER </a></button>
+            <button class="back-button class-button"><a style="text-decoration:none"  href="/select_users_admin.php"> VOLVER </a></button>
         </section>
 
 </div>

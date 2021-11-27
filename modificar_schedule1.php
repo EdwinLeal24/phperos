@@ -26,7 +26,7 @@
                 <input type="submit" value="Actualizar horario">
 
             </form>
-            <button class="back-button class-button"><a style="text-decoration:none"  href="/phperos-app/select_schedule.php"> VOLVER </a></button>
+            <button class="back-button class-button"><a style="text-decoration:none"  href="/select_schedule.php"> VOLVER </a></button>
         </section>
         </div>
 </div>

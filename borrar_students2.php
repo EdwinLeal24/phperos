@@ -49,7 +49,7 @@ if ($sql->rowCount() > 0) {
 
 ?>
          <div class='main-container'>
-        <button class="back-button class-button"><a class="white-link" style="text-decoration:none"  href="/phperos-app/select_students.php"> VOLVER </a></button>
+        <button class="back-button class-button"><a class="white-link" style="text-decoration:none"  href="/select_students.php"> VOLVER </a></button>
     </div>
     </body>
 

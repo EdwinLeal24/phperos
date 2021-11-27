@@ -18,7 +18,7 @@
             <label>Id_Class:</label><input type="text" name="id_class">
             <input type="submit" value="Eliminar clase">
         </form>
-        <button class="back-button class-button"><a style="text-decoration:none"  href="/phperos-app/select_class.php"> VOLVER </a></button>
+        <button class="back-button class-button"><a style="text-decoration:none"  href="/select_class.php"> VOLVER </a></button>
         </section>
 
 </div>
