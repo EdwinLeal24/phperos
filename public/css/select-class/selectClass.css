@@ -1,0 +1,36 @@
+.table {
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+.buttons {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+}
+
+.class-button {
+    background: var(--blue);
+    border-radius: 10px;
+    border-style: none;
+    cursor: pointer;
+    padding: 10px 15px;
+}
+
+.class-button:nth-child(2) {
+    margin: 0 10px;
+}
+
+.class-button:hover {
+    box-shadow: 0 4px 14px 0 rgb(33 118 189 / 60%);
+}
+
+.back-button {
+    background: var(--cyan);
+    padding: 10px 30px;
+    margin-top: 40px;
+}
+
+a {
+    color: var(--white);
+}

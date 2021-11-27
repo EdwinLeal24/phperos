@@ -220,6 +220,9 @@ svg {
 
 table {
     border-collapse: collapse;
+    border-radius: 6px;
+    box-shadow: 0 0 0 2px var(--indigo);
+    border-style: hidden;
 }
 
 caption {
@@ -327,6 +330,16 @@ legend {
     line-height: inherit;
     color: inherit;
     white-space: normal;
+}
+
+th {
+    font-weight: 900;
+}
+
+th,
+td {
+    padding: 5px 15px;
+    text-align: center;
 }
 
 progress {

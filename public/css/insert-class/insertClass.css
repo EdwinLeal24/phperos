@@ -1,0 +1,28 @@
+input {
+    border: 1px solid #1d68a7;
+    margin-top: 10px;
+    border-radius: 5px;
+    outline: none;
+    padding: 5px;
+}
+
+.table th {
+    vertical-align: middle;
+}
+
+.back-button {
+    background: var(--cyan);
+    padding: 10px 30px;
+    margin-top: 40px;
+    border-radius: 10px;
+    border-style: none;
+    cursor: pointer;
+}
+
+.class-button:hover {
+    box-shadow: 0 4px 14px 0 rgb(33 118 189 / 60%);
+}
+
+a {
+    color: var(--white);
+}

@@ -1,0 +1,29 @@
+.back-button {
+    background: var(--cyan);
+    padding: 10px 30px;
+    margin-top: 40px;
+    border-radius: 10px;
+    border-style: none;
+    cursor: pointer;
+}
+
+.class-button:hover {
+    box-shadow: 0 4px 14px 0 rgb(33 118 189 / 60%);
+}
+
+.white-link {
+    color: var(--white);
+}
+
+.shared-button {
+    background: var(--blue);
+    color: var(--white);
+    border-radius: 10px;
+    border-style: none;
+    cursor: pointer;
+    padding: 10px 15px;
+}
+
+.shared-button:hover {
+    box-shadow: 0 4px 14px 0 rgb(33 118 189 / 60%);
+}
