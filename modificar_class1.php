@@ -1,19 +1,42 @@
 <html>
     <head>
-        <title>PHPeros update</title>
+        <link rel="stylesheet" href="styles.css">
     </head>
+        <body>
+         <h1>PHPeros Modificar Clase</h1>
+         <br>
+            <form action="modificar_class2.php" method="post">
+                <table border="1">
+                    <tr>
+                        <th>ID Clase</th>
+                        <td><input type="text" name="id_class"></td>
+                    </tr>
 
-    <body>
-        <h1>PHPeros Update</h1>
-        <form action="modificar_class2.php" method="post">
-        <label>Id_Class:</label><input type="text" name="id_class"><br><br>
-            <label>Id_Teacher:</label><input type="text" name="id_teacher"><br><br>
-            <label>Id_Course:</label><input type="text" name="id_course"><br><br>
-            <label>Id_Schedule:</label><input type="text" name="id_schedule"><br><br>
-            <label>Name:</label><input type="text" name="name"><br><br>
-            <label>Color:</label><input type="text" name="color"><br><br>
-            <input type="submit" value="Actualizar datos">
-        </form>
-    </body>
-
+                    <tr>
+                        <th>ID Profesor</th>
+                        <td><input type="text" name="id_teacher"></td>
+                    </tr>
+                    <tr>
+                        <th>ID Curso</th>
+                        <td><input type="text" name="id_course"></td>
+                    </tr>
+                    <tr>
+                        <th>ID Horario</th>
+                        <td><input type="text" name="id_schedule"></td>
+                    </tr>
+                    <tr>
+                        <th>Nombre</th>
+                        <td><input type="text" name="name"></td>
+                    </tr>
+                    <tr>
+                        <th>Color</th>
+                        <td><input type="text" name="color"></td>
+                    </tr>
+                </table>
+            <br>
+            <input type="submit" value="Insertar datos">
+            </form>
+            <br>
+            <span class="button"><b><a style="text-decoration:none"  href="index"> VOLVER </a></b></span><br><br>
+        </body>
 </html>

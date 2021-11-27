@@ -1,14 +1,22 @@
+
 <html>
     <head>
-        <title>PHPeros delete</title>
+        <link rel="stylesheet" href="styles.css">
     </head>
-
-    <body>
-        <h1>PHPeros Delete</h1>
-        <form action="borrar_enrollment2.php" method="post">
-            <label>Id_Enrollment:</label><input type="text" name="id_enrollment"><br><br>
-            <input type="submit" value="Borrar datos">
-        </form>
-    </body>
-
+        <body>
+        <h1>PHPeros Borrar Matrícula</h1>
+<br>
+            <form action="borrar_enrollment2.php" method="post">
+                <table border="1">
+                    <tr>
+                        <th>ID Matrícula</th>
+                        <td><input type="text" name="id_enrollment"></td>
+                    </tr>
+                </table>
+            <br>
+            <input type="submit" value="Insertar datos">
+            </form>
+            <br>
+            <span class="button"><b><a style="text-decoration:none"  href="index"> VOLVER </a></b></span><br><br>
+        </body>
 </html>

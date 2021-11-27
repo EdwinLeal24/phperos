@@ -18,11 +18,11 @@
                     </tr>
                     <tr>
                         <th>Fecha Inicio</th>
-                        <td><input type="text" name="date_start"></td>
+                        <td><input type="date" name="date_start" value="2021-01-01" min="2021-01-01" max="2022-12-31">></td>
                     </tr>
                     <tr>
                         <th>Fecha Fin</th>
-                        <td><input type="text" name="date_end"></td>
+                        <td><input type="date" name="date_end" value="2021-01-01" min="2021-01-01" max="2022-12-31">></td>
                     </tr>
                     <tr>
                         <th>Activo</th>

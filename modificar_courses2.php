@@ -26,9 +26,7 @@ catch (PDOException $e)
 
 
 <html>
-    <head>
-        <title>PHPeros Update</title>
-    </head>
+<link rel="stylesheet" href="styles.css">
 
     <body>
 
@@ -70,10 +68,11 @@ catch (PDOException $e)
     else{
         echo "<div class= 'content alert alert-primary' > No se puede actualizar el registro, ya lo siento. </div>";
     }
-            
+
 
     ?>
-
+        <br>
+        <span class="button"><b><a style="text-decoration:none"  href="index"> VOLVER </a></b></span><br><br>
     </body>
 
 </html>

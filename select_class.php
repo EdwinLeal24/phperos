@@ -1,5 +1,5 @@
 <?php
-            $conexion=mysqli_connect('localhost','root','','PHPeros');
+    $conexion=mysqli_connect('localhost','root','','PHPeros');
 ?>
 <!DOCTYPE html>
 <html>
@@ -37,7 +37,7 @@
          ?>
         </table>
         <p>
-        <span class="button2"><b><a style="text-decoration:none" href="insert_class1">AÑADIR</a></b></span>
+        <span class="button2"><b><a style="text-decoration:none" href="insert_class1.php">AÑADIR</a></b></span>
         <span class="button2"><b><a style="text-decoration:none" href="modificar_class1.php">MODIFICAR</a></b></span>
         <span class="button2"><b><a style="text-decoration:none" href="borrar_class1.php">ELIMINAR</a></b></span>
         </p>

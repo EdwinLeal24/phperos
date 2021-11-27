@@ -1,3 +1,7 @@
+<html>
+<link rel="stylesheet" href="styles.css">
+
+    <body>
 <?php
 
 //Insercion con PDO
@@ -48,3 +52,10 @@ else{
 }
 
 ?>
+        <br>
+        <span class="button"><b><a style="text-decoration:none"  href="index"> VOLVER </a></b></span><br><br>
+
+    </body>
+
+
+</html>
