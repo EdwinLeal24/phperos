@@ -51,7 +51,7 @@ if (isset($_SESSION['user_id'])) {
             <h4>Mis cursos</h4>
           </a>
         </div>
-        <a class="link" href="modificar_students1.php">
+        <a class="link" href="editProfile.php">
           <h4>Perfil</h4>
         </a>
 
