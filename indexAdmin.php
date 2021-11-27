@@ -37,8 +37,8 @@ if (isset($_SESSION['admin_user_id'])) {
 
     <?php require 'header.php'?>
 
-    <?php if (!empty($resultsAdmin)): ?>
-      <div class="main-container">
+    <?php if (empty($resultsAdmin)): ?>
+        <h1>Please Login or SignUp</h1>
 
         <section class="card">
 

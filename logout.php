@@ -9,4 +9,4 @@ session_unset();
 session_destroy();
 
 // redirigimos al usuario
-header('Location: /phperos-app/login.php');
+header('Location: /login.php');

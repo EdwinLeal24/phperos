@@ -13,7 +13,7 @@ if (!empty($_POST['email']) && !empty($_POST['password'])) {
 
     if (count(array($results)) > 0 && password_verify($_POST['password'], $results['password'])) {
         $_SESSION['admin_user_id'] = $results['id_user_admin'];
-        header("Location: /phperos-app/indexAdmin.php");
+        header("Location: /indexAdmin.php");
     } else {
         $message = 'Usuario o Contraseña incorrecto';
     }
